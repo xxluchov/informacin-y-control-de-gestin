@@ -1,0 +1,63 @@
+	<ion-view view-title="Inicio" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"  header-shrink="true" scroll-event-interval="5"   id="page-inicio" class="page-inicio">
+		    
+<!-- code slide hero -->
+<div class="slide-box-hero">
+		<ion-slides class="slide-box-hero-content" options="{slidesPerView:1}" slider="data.slider">
+			<ion-slide-page>
+				<img ng-src="data/images/images/bn1.png" class="" />
+			</ion-slide-page>
+			<ion-slide-page>
+				<img ng-src="data/images/images/bn2.png" class="" />
+			</ion-slide-page>
+          <ion-slide-page>
+				<img ng-src="data/images/images/bn3.png" class="" />
+			</ion-slide-page>
+          <ion-slide-page>
+				<img ng-src="data/images/images/bn4.png" class="" />
+			</ion-slide-page>
+		</ion-slides>
+	</div>
+<!-- ./code slide hero -->
+
+
+
+<!-- code slide thumbnail -->
+<a ng-href="#/informacin_y_control_de_gestin/posts/-1" class="slide-box-title stable-bg dark">Noticias <i class="pull-right icon ion-chevron-right"></i></a>
+<div class="stable-bg dark slide-box-thumbnail" ng-controller="postsCtrl" >
+	<ion-slides class="slide-box-thumbnail-content" ng-if="data_posts" options="{slidesPerView:grid80}" slider="data.slider" show-pager="false">
+		<ion-slide-page class="slide-box-thumbnail-item" ng-repeat="item in data_posts | limitTo : 16:0" ng-if="item.x_featured_media_large!=null">
+			<a ng-href="#/informacin_y_control_de_gestin/post_singles/{{item.id}}"><img class="thumbnail" ng-src="{{item.x_featured_media}}" alt="" /></a>
+			<p class="caption"><a ng-href="#/informacin_y_control_de_gestin/post_singles/{{item.id}}" ng-bind-html="item.title.rendered | strHTML" ></a></p>
+		</ion-slide-page>
+	</ion-slides>
+</div>
+<!-- ./code slide thumbnail -->
+
+ 
+<!-- code items -->
+<div class="intro-box list light-bg dark" ng-controller="postsCtrl" >
+    <div class="list" ng-repeat="item in data_posts | limitTo: 5:0">
+        <div class="item item-colorful"  ng-bind-html="item.title.rendered | strHTML"></div>
+        <div class="item item-text-wrap" ng-class="item.x_featured_media ? 'item-thumbnail-left' : ''">
+            <img alt="" class="full-image" ng-src="{{item.x_featured_media}}" ng-if="item.x_featured_media!=null" />
+            <span ng-bind-html="item.excerpt.rendered | limitTo:140 | strHTML "></span>
+        </div>
+        <a class="item button button-clear colorful ink" href="#/informacin_y_control_de_gestin/post_singles/{{item.id}}">Leer mas</a>
+    </div>
+</div>
+<!-- ./code items -->
+
+
+
+
+<div class="dark-bg stable">
+       <div class="padding text-center">&copy Control Gestion, 2017</div> 
+</div>
+
+
+    
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

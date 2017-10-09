@@ -1,0 +1,28 @@
+	<ion-view view-title="Libro Eventos" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-eventos_bookmark" class="page-eventos_bookmark">
+		    
+<ion-list class="list" ng-if="eventos_bookmark.length != 0">
+
+	<ion-item class="item item-icon-left" type="item-avatar" ng-repeat="item in eventos_bookmark" ng-href="#/informacin_y_control_de_gestin/eventos_singles/{{ item.id }}">
+		<i class="icon ion-ios-bookmarks-outline"></i>
+		<h2 class="" ng-bind-html="item.title.rendered | to_trusted"></h2>
+		<ion-option-button class="assertive-bg" ng-click="removeDbVirtualEventos(item.id)"><i class="icon ion-trash-a"></i></ion-option-button>
+	</ion-item>					
+    
+    <ion-item class="item item-button">
+	   <button class="button button-small button-calm" ng-click="clearDbVirtualEventos();"><i class="icon ion-ios-refresh-outline"></i> Limpiarr</button>
+	</ion-item>
+
+</ion-list>
+
+<div class="eventos_bookmark padding text-center" ng-if="eventos_bookmark.length == 0">
+	<i class="icon ion-ios-bookmarks-outline"></i>
+	<p>No hay artículos</p>
+</div>
+
+    
+    
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

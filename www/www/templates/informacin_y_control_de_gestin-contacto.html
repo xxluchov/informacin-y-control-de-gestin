@@ -1,0 +1,103 @@
+	<ion-view view-title="Contacto" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-contacto" class="contacto page-contacto">
+		<!-- code slide hero -->
+<div class="slide-box-hero">
+		<ion-slides class="slide-box-hero-content" options="{slidesPerView:1}" slider="data.slider">
+			<ion-slide-page>
+				<img ng-src="data/images/images/bn1.png" class="" />
+			</ion-slide-page>
+			<ion-slide-page>
+				<img ng-src="data/images/images/bn2.png" class="" />
+			</ion-slide-page>
+          <ion-slide-page>
+				<img ng-src="data/images/images/bn3.png" class="" />
+			</ion-slide-page>
+          <ion-slide-page>
+				<img ng-src="data/images/images/bn4.png" class="" />
+			</ion-slide-page>
+		</ion-slides>
+	</div>
+<!-- ./code slide hero -->
+
+
+	<div style="width: 100%;height:200%;">
+		<ion-slide-box class="ion-slide-tabs" slide-tabs-scrollable="false" show-pager="false" ion-slide-tabs>
+			<ion-slide ion-slide-tab-label="Servicio" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-click="openURL('tel:75584494')" >
+								<i class="icon ion-android-call" ></i>
+								<h2>Llamar</h2>
+								<span class="item-note pull-left">Nuestro Numero</span>
+							</a>
+							<a class="item item-icon-left" ng-href="#/informacin_y_control_de_gestin/mapa" >
+								<i class="icon ion-ios-location" ></i>
+								<h2>Direccion</h2>
+								<span class="item-note pull-left">Nuestra direccion</span>
+							</a>
+							<a class="item item-icon-left" ng-click="openURL('mailto:ventas@bolivialink.com')" >
+								<i class="icon ion-email" ></i>
+								<h2>Correo</h2>
+								<span class="item-note pull-left">Contacta con Nosotro te Ayudaremos</span>
+							</a>
+							
+						</div>
+					</ion-content>
+			</ion-slide>
+			<ion-slide ion-slide-tab-label="Sitios" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-click="openAppBrowser('http://sitio2.informacion.in')" >
+								<i class="icon ion-android-globe" ></i>
+								<h2>Nuestro Sito Weh</h2>
+								<span class="item-note pull-left">Enlases de Sitio Web</span>
+							</a>
+							<a class="item item-icon-left" ng-click="openAppBrowser('http://uagrm.edu.bo/')" >
+								<i class="icon ion-ios-book-outline" ></i>
+								<h2>UAGRM</h2>
+								<span class="item-note pull-left">Sitio wen UAGRM</span>
+							</a>
+							<a class="item item-icon-left" ng-click="openAppBrowser('http://inscripcion.uagrm.edu.bo/')" >
+								<i class="icon ion-ios-compose" ></i>
+								<h2>Incripciones</h2>
+								<span class="item-note pull-left">Lugar Incripciones UAGRM</span>
+							</a>
+					
+							
+						</div>
+					</ion-content>
+			</ion-slide>
+			<ion-slide ion-slide-tab-label="Social" >
+					<ion-content scroll="false" class="slidingTabContent">
+						<div class="list">
+							<a class="item item-icon-left" ng-click="openURL('https://chat.whatsapp.com/invite/H13zMdNeGw15u1Jlqj3oJR')" >
+								<i class="icon ion-social-whatsapp" ></i>
+								<h2>WhatsApp</h2>
+								<span class="item-note pull-left">Unite a Nuestro grupo</span>
+							</a>
+							<a class="item item-icon-left" ng-click="openAppBrowser('https://www.facebook.com/quieresvender.bo')" >
+								<i class="icon ion-social-facebook" ></i>
+								<h2>Facebook</h2>
+								<span class="item-note pull-left">Evento y ofertas especiales</span>
+							</a>
+							<a class="item item-icon-left" ng-click="openAppBrowser('https://twitter.com/quierevender')" >
+								<i class="icon ion-social-twitter" ></i>
+								<h2>Twitter</h2>
+								<span class="item-note pull-left">Encuentra de todo</span>
+							</a>
+							<a class="item item-icon-left" ng-click="openAppBrowser('https://plus.google.com/103748841204738454616')" >
+								<i class="icon ion-social-googleplus" ></i>
+								<h2>Google+</h2>
+								<span class="item-note pull-left">Publicaciones al dia</span>
+							</a>
+						</div>
+					</ion-content>
+			</ion-slide>
+		</ion-slide-box>
+	</div>
+
+
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>

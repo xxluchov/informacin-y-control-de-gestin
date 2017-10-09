@@ -1,0 +1,36 @@
+	<ion-view view-title="Direcciones de oficina" hide-nav-bar="false" >
+		<!-- content -->
+		<ion-content delegate-handle="top"   id="page-mapa" class="page-mapa">
+		<!-- code refresh -->
+<ion-refresher pulling-text="Refrescando Sitio..."  on-refresh="doRefresh()"></ion-refresher>
+<!-- ./code refresh -->
+
+
+<ion-list class="padding gmapmarker-search" >
+	<div class="item item-input">
+		<i class="icon ion-search placeholder-icon"></i>
+		<input type="search" ng-model="filter_mapas" placeholder="Buscar" aria-label="filter mapas" />
+	</div>
+</ion-list>
+
+<ng-map draggable="true" class="gmapmarker-map" zoom="19" center="-17.7755587,-63.1958504" width="100%" height="100%" default-style="false">
+	<marker ng-repeat="item in data_mapas | filter:filter_mapas as results" on-click="openModal($event)" position="{{item.location}}" clickable="true" id="{{item.id}}" ></marker>
+</ng-map>
+
+
+<script id="mapa-single.html" type="text/ng-template">
+	<ion-modal-view>
+		<ion-header-bar class="bar bar-header light bar-balanced-900">
+			<div class="header-item title">{{ mapa.title | to_trusted }}</div>
+			<div class="buttons buttons-right header-item"><span class="right-buttons"><button class="button button-icon button-clear ion-close ink-black" ng-click="modal.hide()"></button></span></div>
+		</ion-header-bar>
+		<ion-content>
+		  <div class="item item-text-wrap noborder to_trusted" ng-bind-html="mapa.description | strHTML"></div>
+		</ion-content>
+	</ion-modal-view>
+</script>
+    
+    
+		</ion-content>
+		<!-- ./content -->
+	</ion-view>
